@@ -1,0 +1,12 @@
+﻿@model User;
+
+<h2>User Information</h2>
+<div>
+	<h4>First Name:</h4>
+	<p>@Model.FirstName</p>
+	<h4>Last Name:</h4>
+	<p>@Model.LastName</p>
+	<h4>Email:</h4>
+	<p>@Model.Email</p>
+</div>
+@Html.ActionLink("Bank to User List", "Index","Users")
