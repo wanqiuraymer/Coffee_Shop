@@ -8,5 +8,19 @@
 	<p>@Model.LastName</p>
 	<h4>Email:</h4>
 	<p>@Model.Email</p>
+	@if (!string.IsNullOrEmpty(ViewBag.DrinkText))
+	{
+		<h4>Go-To Drink</h4>
+		<p>@ViewBag.DrinkText</p>
+	}
+	@if (!string.IsNullOrEmpty(ViewBag.MemberShipText))
+	{
+		<h4>Membership</h4>
+		<p>@ViewBag.MemberShipText</p>
+	}
+	<h4>Is referred by a current member?</h4>
+	<p>@(Model.IsReferred? "Yes":"No")</p>
+	<h4>Sign up for Digital Invoice?</h4>
+	<p>@(Model.IsDigital == true? "Yes":"No")</p>
 </div>
 @Html.ActionLink("Bank to User List", "Index","Users")

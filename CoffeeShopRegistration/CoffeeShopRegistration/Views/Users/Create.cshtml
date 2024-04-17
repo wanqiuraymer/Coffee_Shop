@@ -22,5 +22,30 @@
 		<input asp-for="Password" class="form-control" />
 		<span asp-validation-for="Password" class=" text-danger"></span>
 	</div>
+	
+	<div>
+		<label asp-for="DrinkId">Go-To Drink</label>
+		<select asp-for="DrinkId" asp-items="ViewBag.Drinks" class="form-control">
+			<option value="">Select a Drink</option>
+		</select>
+
+	</div>
+	<div>
+		<label asp-for="MemberShipId">Membership</label>
+		<select asp-for="MemberShipId" asp-items="ViewBag.MemberShips" class="form-control">
+			<option value="">Select a Membership</option>
+		</select>
+	</div>
+	<div>
+		<label asp-for = "IsReferred"></label>
+		<input asp-for = "IsReferred" type="radio" value ="true"/>Yes
+		<input asp-for ="IsReferred" type="radio" value ="false" />No
+	</div>
+
+	<div>
+		<label asp-for="IsDigital"></label>
+		<input asp-for="IsDigital" type="checkbox"/>
+	</div>
+	
 	<button type ="submit" class="btn btn-primary">Register</button>
 </form>
