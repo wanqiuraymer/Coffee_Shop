@@ -1,0 +1,22 @@
+﻿@model Product
+
+<form asp-action="AddProduct" asp-controller="Products" method="post">
+    <input asp-for="ProductName" class="form-control" placeholder="Name" />
+    <span asp-validation-for="ProductName" class="text-danger"></span>
+
+
+    <textarea asp-for="ProductDescription" class="form-control" placeholder="Description"></textarea>
+    <span asp-validation-for="ProductDescription" class="text-danger"></span>
+
+
+    <input asp-for="Price" class="form-control" placeholder="Price" />
+    <span asp-validation-for="Price" class="text-danger"></span>
+
+
+    <input asp-for="Category"  class="form-control" placeholder="Category" />
+    <span asp-validation-for="Category" class="text-danger"></span>
+
+
+    <button type="submit" class="btn btn-primary">Add Product</button>
+</form>
+@Html.ActionLink("Back to Products", "Index", "Products")

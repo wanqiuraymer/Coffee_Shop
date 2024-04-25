@@ -1,0 +1,14 @@
+﻿@model Product;
+<h2>Product Information</h2>
+<div>
+	<h4>Prodcut Name:</h4>
+	<p>@Model.ProductName</p>
+	<h4>Price:</h4>
+	<p>$ @Model.Price</p>
+	<h4>Category:</h4>
+	<p>@Model.Category</p>
+	<h4>Description</h4>
+	<p>@Model.ProductDescription</p>
+	
+</div>
+@Html.ActionLink("Bank to Product list", "Index","Products")

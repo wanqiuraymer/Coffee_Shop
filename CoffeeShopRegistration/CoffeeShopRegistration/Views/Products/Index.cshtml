@@ -1,0 +1,13 @@
+﻿@model IndexViewModel;
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+</div>
+<form asp-action="Results" asp-controller="Products" method="post">
+	<select asp-for="SelectedCategory" asp-items="Model.Categories.Select(b => new SelectListItem {Value = b, Text = b})" class="form-control">
+		<option value="">Select a category to view product</option>
+	</select>
+	<button type="submit" class="btn btn-primary">View Products</button>
+</form>
+<hr />
+
+@Html.ActionLink("Add a product", "AddProduct", "Products")
